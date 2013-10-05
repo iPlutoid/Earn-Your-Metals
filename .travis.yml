@@ -1,1 +1,11 @@
 language: objective-c
+before_script:
+- ./scripts/travis/add-key.sh
+after_script:
+- ./scripts/travis/remove-key.sh
+env:
+  global:
+  - APPNAME="Earn-Your-Metals"
+  - DEVELOPER_NAME="iPhone Developer: Peiying Wen (EWMAMWZHRL)"
+  - PROFILE_UUID=PROVISIONING_PROFILE_UUID
+  - secure: eiMV07If+glt3m1sX10im0rqc00up9LtmyeGBjY2yxDorBnOQf3QKF1AFMY7P7fc5uTbKhTYnul8AnyVUpqKfkHWlJWTtuc9ZUtinlo5DoNc2AsxIcD57rb3wxGlXK7FNlHFd3xYI3/SNjLiURFbLvswahbA6ok11PoK4qCGTgo=
